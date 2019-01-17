@@ -16,7 +16,7 @@
 <c:out value="${cookie.language.value}" default="Cześć"/>
 <form action="/Servlet_01_2" method="post">
     Wybierz język:
-    <select name="lang" >
+    <select name="lang">
         <c:forEach var="lang" items="${lang}">
             <option value=${lang.key}>${lang.key}</option>
         </c:forEach>
