@@ -16,14 +16,14 @@
     Wybierz lotnisko wylotu:
     <select name="airportFrom">
         <c:forEach var="airport" items="${airports}">
-            <option value=${airport.name}>${airport.name}</option>
+            <option value=${airport.code}>${airport.name}</option>
         </c:forEach>
     </select>
     <br>
     Wybierz lotnisko przylotu:
     <select name="airportTo">
         <c:forEach var="airport" items="${airports}">
-            <option value=${airport.name}>${airport.name}</option>
+            <option value=${airport.code}>${airport.name}</option>
         </c:forEach>
     </select>
     <br>
