@@ -61,6 +61,13 @@ public class Servlet_02 extends HttpServlet {
         response.getWriter().append("Długość lotu w godz: ").append(flightTime).append("<br>");
         response.getWriter().append("Cena lotu: ").append(price).append("<br>");
         response.getWriter().append("Obiekt Flight: ").append(flightTemp.toString()).append("<br>");
+        request.setAttribute("flight", flightTemp);
+        request.setAttribute("airports", airports);
+        request.setAttribute("flightTime", flightTime);
+        request.setAttribute("ldt", ldt);
+
+        getServletContext().getRequestDispatcher("/table2.jsp")
+                .forward(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
